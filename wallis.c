@@ -34,16 +34,16 @@ float pi=1.0;
    int i;
     for(i=1;i<=n;i++) 
      {
-      // printf("%d ",i);
+      
        
         pi *=(4.0*i*i)/(4.0*i*i-1);
        }
 if(n!=0)
  pi*=2.0; 
  else pi=0.0;
-// printf("%f..\n",pi);
+
  
-  return (pi);
+  return (pi); 
 }
     
     
