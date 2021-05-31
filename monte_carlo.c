@@ -5,6 +5,8 @@
 
 float mc_pi(int);
 
+float frandom();
+
 float frandom() {
   long int q = random();
   float ret = (float)q/(float)RAND_MAX;
@@ -39,5 +41,32 @@ int main(void) {
   }
 }
 
+float mc_pi(int n){
+  int inside=0, count=0;
+ for(int i=0;i<n;i++)
+ {
+  float x = rand()%(10000-0+1);
+  x/=10000;
+  float y= rand()%(10000-0+1);
+  y/=10000;
+  float z = x*x+y*y;
+  z= pow(z,0.5);
+  //printf("%f %f %f\n",x,y,z);
+  if(z<=1)
+  { 
+    inside++;
+    }
+    
+    count++;
+  }
+  //printf("%d %d\n",inside ,count);
+  float pi = (float)(4*inside)/count;
+  return pi;
+  
+  
+}
 
 
+
+
+    
